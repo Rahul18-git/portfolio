@@ -633,6 +633,26 @@
             color: #00d4ff;
         }
 
+        .achievement-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 102, 255, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .achievement-card:hover {
+            border-color: #0066ff;
+            background: #f9f9f9;
+        }
+
+        .achievement-card p {
+            color: #333333;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
         /* Contact Section */
         #contact {
             background: rgba(0, 0, 0, 0.3);
@@ -790,6 +810,7 @@
                 <li><a onclick="scrollTo('about')">About</a></li>
                 <li><a onclick="scrollTo('projects')">Projects</a></li>
                 <li><a onclick="scrollTo('skills')">Skills</a></li>
+                <li><a onclick="scrollTo('certifications')">Certifications</a></li>
                 <li><a onclick="scrollTo('achievements')">Achievements</a></li>
                 <li><a onclick="scrollTo('contact')">Contact</a></li>
                 <li><a href="#contact" class="resume-btn">📄 Contact</a></li>
@@ -1009,6 +1030,18 @@
         </div>
     </section>
 
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div class="achievement-card cert-card">
+                <p>• Achieved Semester Topper distinction in B.Tech Computer Science during the 3rd Year, 1st Semester, demonstrating consistent academic excellence and strong performance across core subjects.</p>
+                <p>• Built multiple full-stack and AI-based projects demonstrating practical software development experience.</p>
+                <p>• Strengthened understanding of Data Structures, Algorithms, and Object-Oriented Programming through academic and personal projects.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -1083,7 +1116,7 @@
 
         // Update active link when scrolling
         window.addEventListener('scroll', function() {
-            const sections = ['about', 'experience', 'skills', 'projects', 'contact'];
+            const sections = ['about', 'experience', 'skills', 'projects', 'certifications', 'achievements', 'contact'];
             
             for (let i = sections.length - 1; i >= 0; i--) {
                 const section = document.getElementById(sections[i]);
